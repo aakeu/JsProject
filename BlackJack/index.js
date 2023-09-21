@@ -13,8 +13,14 @@ let cardsEl = document.querySelector(".cards-el") // using class selector
 //working for the play-el function
 let player = { //this is a key defination
     name: "UncleBola",
-    chips: 145
+    chips: 300,
+    sayHello: function() { // passing a function in an object
+        console.log('Hello')
+    }
 }
+
+player.sayHello();
+
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
