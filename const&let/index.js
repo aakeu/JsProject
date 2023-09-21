@@ -8,4 +8,5 @@ shippingTime = "7-14 days";
 
 const fullPrice = basePrice - discount + shippingCost
 
-console.log("Total cost: "+ fullPrice + ". It will arrive in " + shippingTIme);
+console.log
+("Total cost: "+ fullPrice + ". It will arrive in " + shippingTIme);
