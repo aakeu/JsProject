@@ -62,9 +62,26 @@ function render(leads)
 }
 
 
+
+// Add a click event listener to tabBtn
 tabBtn.addEventListener("click", function() {
-    console.log(tabs[0].url)//.url remove url {} & just render the link
+    //console.log(tabs[0].url)//.url remove url {} & just render the link
+    // Use chrome.tabs.query to get information about the active tab
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        // tabs[0].url contains the URL of the active tab
+        var tabUrl = tabs[0].url;
+
+        // Push the URL to the myLeads array
+        myLeads.push(tabUrl);
+
+        // Store the updated myLeads array in local storage
+        localStorage.setItem("myLeads", JSON.stringify(myLeads));
+
+        // Render the leads (assuming render is defined elsewhere in your code)
+        render(myLeads);
+    });
 });
+
 
 // deleteBtn.addEventListener("dblclick", function() {
 //     console.log("Double-clicked!");
