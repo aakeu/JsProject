@@ -16,7 +16,8 @@ box-sizing: border-box; /*this will help keep it within screen*/
 border: 1px solid #5f9341; /*this is just to give the border some color and shape*/
 }
 
-button{
+#input-btn, #tab-btn
+{
 background-color: #5f9341;
 color: white;
 margin-top: 3px;
@@ -25,7 +26,19 @@ padding: 10px;
 height: 35px; */
 font-weight: bold;
 border-radius: none;
-border: none; /*it remove all background shadow and light*/
+border: 1px solid #5f9341; /*it remove all background shadow and light*/
+}
+
+#delete-btn{
+    background-color: white;
+    color: #5f9341;
+    margin-top: 3px;
+    padding: 10px;
+    /* width: 120px;
+    height: 35px; */
+    font-weight: bold;
+    border-radius: none;
+    border: 1px solid #5f9341;
 }
 
 ul {
